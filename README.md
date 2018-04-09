@@ -37,7 +37,7 @@ commands.listen();
 client.login('token');
 ```
 
-A more slightly more complex example:
+A slightly more complex example:
 ```js
 var Discord = require('discord.js');
 var client = new Discord.Client();
