@@ -1,6 +1,6 @@
 {
   "name": "discord-routes",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Easily create discord.js bot commands with Express like routing capabilites.",
   "main": "index.js",
   "scripts": {
@@ -11,5 +11,11 @@
     "url": "https://github.com/Triforcey/discord-routes.git"
   },
   "author": "JD Flamm",
+  "keywords": [
+    "discord",
+    "routing",
+    "commands",
+    "bot"
+  ],
   "license": "GPL-3.0+"
 }
