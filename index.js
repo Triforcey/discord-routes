@@ -39,8 +39,10 @@ exports.CommandSet = class {
 				command = self.getCommandByPath(path.join(' '));
 				if (command) break;
 				path.pop();
-				if (!path.length) command = self.getCommandByPath('');
 			}
+			if (!path.length) {
+				command = self.getCommandByPath('');
+			};
 			if (!command) return;
 			args.splice(0, path.length);
 			command.action(msg, args);
