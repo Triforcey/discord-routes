@@ -36,7 +36,6 @@ exports.CommandSet = class {
 			var path = [...args];
 			var command;
 			while (path.length) {
-				console.log('"' + path.join(' ') + '"');
 				command = self.getCommandByPath(path.join(' '));
 				if (command) break;
 				path.pop();
