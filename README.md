@@ -48,6 +48,11 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
+// responds to all unrecognized paths with a simple help message
+commands.set('', req => {
+  req.reply('Try \'!bot ping\'!');
+});
+
 // responds to '!bot ping' with 'Pong!'
 commands.set('ping', req => {
   req.reply('Pong!');
@@ -56,6 +61,16 @@ commands.set('ping', req => {
 // classic echo command invoked by '!bot echo <text>'
 commands.set('echo', (req, args) => {
   req.reply(args.join(' '));
+});
+
+// unsets a command
+// calling '!bot delete command echo' will unset the echo command
+commands.set('delete command', (req, args) => {
+  if (args.length < 1) {
+    req.reply('What should I delete?');
+    return;
+  }
+  commands.unset(args.join(' '));
 });
 
 // hello world
