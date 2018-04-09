@@ -1,7 +1,7 @@
 {
   "name": "discord-routes",
   "version": "1.0.0",
-  "description": "Easily create Discord.js bot commands with express like routing capabilites.",
+  "description": "Easily create Discord.js bot commands with Express like routing capabilites.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
