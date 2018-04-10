@@ -6,6 +6,7 @@ exports.CommandSet = class {
 		this.commands = [];
 	}
 	getCommandByPath(path) {
+		path = path.toLowerCase();
 		for (var i = 0; i < this.commands.length; i++) {
 			if (this.commands[i].path.join(' ') == path) {
 				return this.commands[i];
@@ -14,6 +15,7 @@ exports.CommandSet = class {
 		return null;
 	}
 	unset(path) {
+		path = path.toLowerCase();
 		for (var i = 0; i < this.commands.length; i++) {
 			if (this.commands[i].path.join(' ') == path) {
 				return this.commands.splice(i, 1)[0];
@@ -24,7 +26,7 @@ exports.CommandSet = class {
 	set(path, action) {
 		this.unset(path);
 		return this.commands.push({
-			path: path.split(' '),
+			path: path.toLowerCase().split(' '),
 			action: action
 		});
 	}
