@@ -1,6 +1,6 @@
 {
   "name": "discord-routes",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Easily create discord.js bot commands with Express like routing capabilites.",
   "main": "index.js",
   "scripts": {
