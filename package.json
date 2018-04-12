@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Triforcey/discord-routes.git"
+    "url": "git+https://github.com/Triforcey/discord-routes.git"
   },
   "author": "JD Flamm",
   "keywords": [
@@ -17,5 +17,9 @@
     "commands",
     "bot"
   ],
-  "license": "GPL-3.0+"
+  "license": "GPL-3.0+",
+  "bugs": {
+    "url": "https://github.com/Triforcey/discord-routes/issues"
+  },
+  "homepage": "https://github.com/Triforcey/discord-routes#readme"
 }

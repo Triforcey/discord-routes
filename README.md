@@ -5,17 +5,21 @@
 *Easily create [discord.js] bot commands with Express like routing capabilites.*
 
 ## About
+
 discord-routes is a Node.js library to simplify implementation of bot commands powered by [discord.js].
 
 It allows the implementation of commands similarly to setting up routes with Express.
 
 ## Installation
+
 This supports all recent-ish versions of Node.js.
 
 In your project run `npm install --save discord-routes`.
 
 ## Usage
+
 A simple example:
+
 ```js
 var Discord = require('discord.js');
 var client = new Discord.Client();
@@ -38,6 +42,7 @@ client.login('token');
 ```
 
 A slightly more complex example:
+
 ```js
 var Discord = require('discord.js');
 var client = new Discord.Client();
@@ -66,7 +71,7 @@ commands.set('echo', (req, args) => {
 // unsets a command
 // calling '!bot delete command echo' will unset the echo command
 commands.set('delete command', (req, args) => {
-  if (args.length < 1) {
+  if (!args.length) {
     req.reply('What should I delete?');
     return;
   }
